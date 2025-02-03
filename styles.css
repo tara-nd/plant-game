@@ -3,6 +3,30 @@ body {
     text-align: center;
     background-color: #ffebf0;
     color: #d63384;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* 🌱 Mobile-Friendly Layout */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 20px;
+    }
+
+    .plant {
+        width: 120px;  /* Smaller size for mobile */
+    }
+
+    .shop-container, .updates-container {
+        width: 90%;
+        margin: auto;
+    }
+
+    .shop-item {
+        width: 100%;
+        font-size: 14px;
+    }
 }
 
 .game-container {
@@ -11,6 +35,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .shop-container, .updates-container {
@@ -69,4 +94,3 @@ h3 {
         opacity: 0;
     }
 }
-

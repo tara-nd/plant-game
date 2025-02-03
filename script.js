@@ -3,7 +3,6 @@ let earningsPerClick = 1;
 let autoClicker = false;
 let player;
 
-// YouTube Background Music Setup
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '0',
@@ -25,7 +24,6 @@ function toggleMusic() {
     }
 }
 
-// Sound Effect Setup
 const clickSound = document.getElementById("click-sound");
 function playSound() {
     clickSound.currentTime = 0;
