@@ -3,6 +3,7 @@ let earningsPerClick = 1;
 let autoClicker = false;
 let player;
 
+// YouTube Background Music Setup
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '0',

@@ -8,66 +8,49 @@ body {
     overflow-x: hidden;
 }
 
-/* 🌱 Mobile-Friendly Layout */
-@media (max-width: 768px) {
-    h1, h2 {
-        font-size: 20px;
-    }
-
-    .plant {
-        width: 120px;  /* Smaller size for mobile */
-    }
-
-    .shop-container, .updates-container {
-        width: 90%;
-        margin: auto;
-    }
-
-    .shop-item {
-        width: 100%;
-        font-size: 14px;
-    }
-}
-
+/* 🌱 Make Everything Look Proportionate */
 .game-container {
     margin-top: 20px;
     position: relative;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.shop-container, .updates-container {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #ffb6c1;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
-    cursor: pointer;
-}
-
-h3 {
-    color: #8b004b;
-    cursor: pointer;
-}
-
+/* ✅ Increased Plant Image Size */
 .plant {
-    width: 150px;
+    width: 200px; /* Larger plant images */
+    height: auto;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
 }
 
+/* ✅ Bigger Shop & Upgrade Images */
 .shop-img {
-    width: 50px;
+    width: 80px;  /* Make shop items larger */
     display: block;
     margin: auto;
 }
 
+/* ✅ Make Shop & Updates Sections Fit the Design */
+.shop-container, .updates-container {
+    width: 90%;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #ffb6c1;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* ✅ Make Buttons Bigger */
 .shop-item {
-    margin: 10px;
-    padding: 10px;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px;
+    margin: 5px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -75,22 +58,35 @@ h3 {
     color: white;
 }
 
+/* ✅ Mobile Optimization */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    .plant {
+        width: 180px;
+    }
+
+    .shop-img {
+        width: 70px;
+    }
+
+    .shop-item {
+        font-size: 14px;
+    }
+}
+
+/* ✅ Prop Animation */
 .prop {
     position: absolute;
-    width: 50px;
+    width: 60px;
     opacity: 0;
     transition: transform 0.3s, opacity 0.5s ease-in-out;
 }
 
 @keyframes popAnimation {
-    0% {
-        transform: scale(0.5);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.5);
-    }
-    100% {
-        opacity: 0;
-    }
+    0% { transform: scale(0.5); opacity: 1; }
+    50% { transform: scale(1.8); }
+    100% { opacity: 0; }
 }
