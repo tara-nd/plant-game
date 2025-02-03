@@ -18,7 +18,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function toggleMusic() {
-    if (player.getPlayerState() === 1) { // Playing
+    if (player.getPlayerState() === 1) {
         player.pauseVideo();
     } else {
         player.playVideo();
@@ -42,7 +42,7 @@ function clickPlant() {
 function generateProps() {
     for (let i = 0; i < 5; i++) {
         let prop = document.createElement("img");
-        prop.src = "../assets/props.png";
+        prop.src = "Assets/props.png";
         prop.classList.add("prop");
 
         let x = Math.random() * window.innerWidth;
@@ -68,7 +68,7 @@ function buyPlant(type, cost) {
         
         let plantContainer = document.getElementById("plant-container");
         let newPlant = document.createElement("img");
-        newPlant.src = `../assets/${type}.png`;
+        newPlant.src = `Assets/${type}.png`;
         newPlant.classList.add("plant");
         newPlant.onclick = () => clickPlant();
         plantContainer.appendChild(newPlant);
@@ -87,9 +87,4 @@ function toggleShop() {
 function toggleUpdates() {
     let updates = document.getElementById("updates-list");
     updates.style.display = updates.style.display === "none" ? "block" : "none";
-}
-
-function toggleMenu() {
-    let menu = document.getElementById("menu-options");
-    menu.style.display = menu.style.display === "none" ? "block" : "none";
 }
